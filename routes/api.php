@@ -21,5 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiresource('cliente', App\Http\Controllers\ClienteController::class);
 Route::apiresource('carro', App\Http\Controllers\CarroController::class);
 Route::apiresource('locacao', App\Http\Controllers\LocacaoController::class);
-Route::apiresource('marca', App\Http\Controllers\Controller::class);
+Route::apiresource('marca', App\Http\Controllers\MarcaController::class);
 Route::apiresource('cliente', App\Http\Controllers\ClienteController::class);
