@@ -15,4 +15,21 @@ class Marca extends Model
      * @var array
      */
     protected $fillable = ['nome', 'imagem'];
+
+    public function rules(): array
+    {
+        return [
+            'nome' => 'required|unique:marcas|min:3',
+            'imagem' => 'required',
+        ];
+    }
+
+    public function feedback(): array
+    {
+        return [
+            'required' => 'O campo :attribute é obrigatório',
+            'nome.unique' => 'O nome da marca já existe',
+            'nome.min' => 'O nome deve ter no mínimo 3 caracteres',
+        ];
+    }
 }
